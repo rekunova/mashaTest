@@ -34,7 +34,6 @@ function MainContent() {
             />
 
             <Joke
-            
                 punchline="I am tired as hell"
             />
 

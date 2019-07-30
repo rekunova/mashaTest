@@ -15,9 +15,9 @@ function MyFamily(){
         timeOfDay = 'evening'
     }
     return(
-        <footgher>
+        <footer>
             <h3>Let me go, because it is {timeOfDay} , already</h3>
-        </footgher>
+        </footer>
     )
 }
 

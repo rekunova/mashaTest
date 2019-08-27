@@ -2,45 +2,54 @@ import React from 'react'
 import ToDoItem from './ToDoItem';
 import ContactCard from './ContactCard';
 import Joke from './Joke'
-function MainContent() {
-    
-    return (
-        <div>
-            <h1>Main content should be here..</h1>
+import Product from './Product'
+import vschoolProducts from './vschoolProducts'
+import toDoList from './todosData'
+import Trainee from './Trainee'
+class MainContent extends React.Component {
 
-            <div className="todo_list">
+    render (){
+        const productsArray = vschoolProducts.map(function (block) {
+            return (
+                <Product product={block} />
+            )
+        })
+        const toDoArrey = toDoList.map(item => <ToDoItem task={item.text} key={item.id} tick={item.completed} />)
+        return (
+            <div>
+                <h1>Main content should be here..</h1>
 
-                <h2 className="todo_heading"> This is a ToDo list</h2>
+                <div className="todo_list">
 
-                <ToDoItem /><br />
-                <ToDoItem /><br />
-                <ToDoItem /><br />
+                    <h2 className="todo_heading"> This is a ToDo list</h2>
 
+                    {toDoArrey}
 
+                </div>
+                <Trainee />
+
+                <ContactCard
+                    contact={{ name: "ivan", age: "20", about: "i like apples" }}
+
+                />
+                <ContactCard
+                    contact={{ name: "maria", age: "20", about: "i like apples" }}
+
+                />
+
+                <Joke
+                    question=" have you seen me?"
+                    punchline="no"
+                />
+
+                <Joke
+
+                    punchline="I am tired as hell"
+                />
+                {productsArray}
             </div>
-
-            <ContactCard
-                contact ={{name: "ivan", age:"20", about: "i like apples"}}
-
-            />
-            <ContactCard
-               contact ={{name: "maria", age:"20", about: "i like apples"}}
-
-            />
-
-            <Joke
-                question =" have you seen me?"
-                punchline ="no"
-            />
-
-            <Joke
-            
-                punchline="I am tired as hell"
-            />
-
-        </div>
-    )
-
+        )
+    }
 }
 
 export default MainContent

@@ -37,10 +37,17 @@ class MainContent extends React.Component {
 
                 />
 
+<<<<<<< HEAD
                 <Joke
                     question=" have you seen me?"
                     punchline="no"
                 />
+=======
+            <Joke
+             question =" have you seen me?"
+
+            />
+>>>>>>> 95c09e7d1cd81dce985822c4d023816816608953
 
                 <Joke
 

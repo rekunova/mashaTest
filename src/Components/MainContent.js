@@ -6,9 +6,11 @@ import Product from './Product'
 import vschoolProducts from './vschoolProducts'
 import toDoList from './todosData'
 import Trainee from './Trainee'
+import ClassText from './ClassText'
+import ClassLesson from './ClassLesson'
 class MainContent extends React.Component {
 
-    render (){
+    render() {
         const productsArray = vschoolProducts.map(function (block) {
             return (
                 <Product product={block} />
@@ -37,23 +39,20 @@ class MainContent extends React.Component {
 
                 />
 
-<<<<<<< HEAD
                 <Joke
                     question=" have you seen me?"
-                    punchline="no"
-                />
-=======
-            <Joke
-             question =" have you seen me?"
 
-            />
->>>>>>> 95c09e7d1cd81dce985822c4d023816816608953
+                />
 
                 <Joke
 
                     punchline="I am tired as hell"
                 />
                 {productsArray}
+
+                <ClassText />
+
+                <ClassLesson/>
             </div>
         )
     }
